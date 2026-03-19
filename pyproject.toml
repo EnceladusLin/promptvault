@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptvault"
+version = "0.1.0"
+description = "A local-first prompt manager for AI workflows"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["click>=8.0", "pyyaml>=6.0", "rich>=13.0"]
+
+[project.scripts]
+promptvault = "promptvault.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
